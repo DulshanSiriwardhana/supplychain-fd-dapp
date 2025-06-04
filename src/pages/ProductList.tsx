@@ -10,6 +10,7 @@ const ProductList = () => {
       try {
         const contract = await getSupplyChainContract();
         if (!contract) return;
+        //alert(JSON.stringify(contract));
 
         const ids: bigint[] = await contract.getAllProductIds();
 
